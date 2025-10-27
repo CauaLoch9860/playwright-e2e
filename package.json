@@ -4,7 +4,7 @@
   "description": "E2E tests using MS Playwright",
   "main": "index.js",
   "author": "ugioni",
-  "license": "ISC",
+  "license": "ISC", 
   "devDependencies": {
     "@types/node": "^24.9.1",
     "@zerostep/playwright": "^0.1.5",
