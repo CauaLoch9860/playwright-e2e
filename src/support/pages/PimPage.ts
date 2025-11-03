@@ -1,6 +1,6 @@
-// src/support/pages/PimPage.ts
+
 import { Page, expect } from '@playwright/test';
-// Se o ZeroStep fosse importado: import { step } from '@zerostep/playwright'; 
+
 import PimElements from '../elements/PimElements';
 import BasePage from './BasePage';
 
@@ -18,13 +18,9 @@ export default class PimPage extends BasePage {
     await this.verifyUrl('/web/index.php/pim/viewEmployeeList');
   }
   
-  // Método que usará o ZeroStep AI
+  
   async buscarFuncionarioComAI(employeeId: string): Promise<void> {
-    // --- PONTO DE INTEGRAÇÃO ZEROSTEP AI ---
-    // (AÇÃO VIA PLAYWRIGHT TRADICIONAL PARA COMPATIBILIDADE)
-    // Se estivéssemos usando ZS, a linha seria:
-    // await step(`Find the employee with ID ${employeeId} and click the Search button`, { page: this.page });
-    // Por enquanto, usamos a ação via locators:
+
     
     await this.pimElements.getEmployeeIdField().fill(employeeId);
     await this.pimElements.getSearchButton().click();

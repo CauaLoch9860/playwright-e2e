@@ -22,12 +22,12 @@ export default class OrangePage extends BasePage {
     await expect(this.orangeElements.getDashboardHeader()).toBeVisible();
   }
 
-  // NOVO MÉTODO: Validação de Login Inválido
+  
   async validarLoginInvalido(expectedMessage: string): Promise<void> {
-    // 1. Verifica se o elemento da mensagem de erro está visível
+
     await expect(this.orangeElements.getErrorMessage()).toBeVisible();
     
-    // 2. Verifica se o texto do elemento é o esperado
+
     await expect(this.orangeElements.getErrorMessage()).toHaveText(expectedMessage);
   }
 }

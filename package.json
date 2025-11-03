@@ -28,7 +28,7 @@
     "debug": "npx playwright test --output artifacts/media --debug --workers 1",
     "ui": "npx playwright test --output artifacts/media --ui --workers 1",
     "show-report": "npx playwright show-report artifacts/report",
-    "actions": "npx playwright test --output artifacts/media --workers 1",
+    "actions": "npx playwright test src/scenarios/Orange.spec.ts src/scenarios/PimSearch.spec.ts --output artifacts/media --workers 1",
     "ci": "npm run clean && npm run format && npm run verify && npm run test"
   }
 }
