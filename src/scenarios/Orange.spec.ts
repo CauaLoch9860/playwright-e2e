@@ -12,8 +12,8 @@ test.describe('Testes de Login no OrangeHRM', () => {
     .retrieveData();
   
   // Credenciais Válidas
-  const USERNAME_VALIDO = 'Admin';
-  const PASSWORD_VALIDA = 'admin123';
+  const usernameValido = 'Admin';
+  const passwordValida = 'admin123';
   
   // Credenciais Inválidas e Mensagem de Erro Esperada
   const USERNAME_INVALIDO = 'usuario_inexistente';
@@ -26,7 +26,7 @@ test.describe('Testes de Login no OrangeHRM', () => {
   });
 
   test('Validar login com credenciais válidas', async () => {
-    await orangePage.fazerLogin(USERNAME_VALIDO, PASSWORD_VALIDA);
+    await orangePage.fazerLogin(usernameValido, passwordValida);
     await orangePage.validarLoginComSucesso();
   });
   

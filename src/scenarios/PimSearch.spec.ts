@@ -14,11 +14,11 @@ test.describe('Testes PIM: Busca de Funcionário com ZeroStep AI', () => {
     .andPath('application.Orange') 
     .retrieveData();
 
-  const USERNAME_VALIDO = 'Admin';
-  const PASSWORD_VALIDA = 'admin123';
+  const usernameValido = 'Admin';
+  const passwordValida = 'admin123';
   
 
-  const ID_FUNCIONARIO = '0295'; 
+  const idFuncionario = '0295'; 
 
   test.beforeEach(async ({ page }) => {
     orangePage = new OrangePage(page);
@@ -26,7 +26,7 @@ test.describe('Testes PIM: Busca de Funcionário com ZeroStep AI', () => {
     
 
     await page.goto(BASE_URL);
-    await orangePage.fazerLogin(USERNAME_VALIDO, PASSWORD_VALIDA);
+    await orangePage.fazerLogin(usernameValido, passwordValida);
 
     await pimPage.navegarParaPim();
   });
@@ -34,9 +34,9 @@ test.describe('Testes PIM: Busca de Funcionário com ZeroStep AI', () => {
 
   test('Buscar funcionário pelo ID e validar o resultado (Usando ZeroStep AI)', async () => {
 
-    await pimPage.buscarFuncionarioComAI(ID_FUNCIONARIO);
+    await pimPage.buscarFuncionarioComAI(idFuncionario);
     
 
-    await pimPage.validarBuscaComSucesso(ID_FUNCIONARIO);
+    await pimPage.validarBuscaComSucesso(idFuncionario);
   });
 });
